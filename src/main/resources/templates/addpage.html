@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th = "http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="main_layout.html">
+
+
+
+<div layout:fragment="mainContent">
+  <div class = "row">
+    <form action="/add-request" method="post">
+      <div class="mb-3">
+        <label class="form-label">FIO:</label>
+        <input type="text" name="userName" class="form-control" placeholder="FIO">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Course:</label>
+        <input type="text" name="courseName" class="form-control" placeholder="course">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Phone:</label>
+        <input type="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+                name="phone" class="form-control" placeholder="8778-787-7887" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Commentary:</label>
+        <textarea class="form-control" name="commentary" rows="10" placeholder="Leave your comment here"></textarea>
+      </div>
+
+      <div class="col-auto">
+        <button class="btn btn-primary mb-3">Add Application</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+</html>
